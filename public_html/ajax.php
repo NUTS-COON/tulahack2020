@@ -6,6 +6,7 @@ $type = htmlspecialchars($_GET['type']);
 switch ($type){
     case 'addCart':
         $res = $basket->addCart(htmlspecialchars($_GET['id']));
+        $basket->setBasket();
         ?>
         <table>
             <?foreach ($basket->getBasket() as $item):?>

@@ -16,7 +16,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/php_interface/header.php';
 <body id="markers-on-the-map">
     <header>
         <div class="container">
-            <div class="logo">impostershop</div>
+            <img class="logo" src="/assets/img/logo.png">
             <div class="search">
                 <input class="search-input" placeholder="Поиск...">
             </div>
@@ -35,7 +35,10 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/php_interface/header.php';
         <div id="map" class="map">
         </div>
     </main>
-    <footer><span>TulaHack2020</span><p><a href="#ex1" rel="modal:open">Open Modal</a></p></footer>
+    <footer>
+        <span class="tula-hack-tag">#TulaHack2020</span>
+        <img class="telegram-icon" src="assets/img/telegram-icon.png">
+    </footer>
     <div id="ex1" class="modal">
         <h3 class ="text">Корзина</h3>
         <div class="vp">

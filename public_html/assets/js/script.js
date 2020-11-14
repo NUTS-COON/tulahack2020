@@ -41,7 +41,8 @@ $(function() {
                         method: 'get',
                         data: {type: "addCart", id: id},
                         success: function (data) {
-                            $('.vp').html(data)
+                            console.log(data);
+                            $('.vp').html(data);
                         }
                     });
                 });

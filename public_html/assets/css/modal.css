@@ -14,8 +14,10 @@
     margin-left: 20px;
     display: flex;
     justify-content: center;
-    height: 200px; 
+    height: 180px;
     width: 350px;
+    margin-bottom: 20px;
+    overflow-y: scroll;
 } 
 .checkout{
    display: flex;
