@@ -3,7 +3,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
     <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-    <title>Interactive base map</title>
+    <title>IMPOSTER SHOP</title>
     <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.1/mapsjs-ui.css" />
     <link rel="stylesheet" type="text/css" href="/assets/css/style.css?get=<?=time()?>" />
     <link rel="stylesheet" type="text/css" href="/assets/css/map.css?get=<?=time()?>" />
@@ -25,7 +25,10 @@
         <div class="banner">
             <img class="img" src="/assets/img/26250.png" alt="картинка">
         </div>
-        <div id="map" class="map"></div>
+        <ul>
+        </ul>
+        <div id="map" class="map">
+        </div>
     </main>
     <footer><span>TulaHack2020</span></footer>
     <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-core.js"></script>

@@ -55,6 +55,7 @@ body{
 }
 main{
     margin-top: 50px;
+    position: relative;
 }
 .banner{
     position: relative;
@@ -98,6 +99,31 @@ footer{
     width: 100%;
     font-family: 'Roboto', sans-serif;
     font-size:18px
+}
+main ul{
+    width: 100%;
+    max-height: 250px;
+    background: white;
+    overflow-y: scroll;
+    z-index: 1;
+}
+main ul::-webkit-scrollbar {
+    width: 10px;
+}
+main ul::-webkit-scrollbar-thumb {
+    background-color: #42065F;
+}
+main ul::-webkit-scrollbar-track {
+    background-color: #C1C1C1;
+}
+@media only screen and (min-width: 501px) {
+    main ul{
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        width: 350px;
+        border: 1px solid white;
+    }
 }
 @media only screen and (max-width: 1000px) {
     .logo{

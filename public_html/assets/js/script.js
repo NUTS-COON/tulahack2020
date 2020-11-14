@@ -1,5 +1,6 @@
 $(function() {
     $('#map').css('display', 'none');
+    $('main ul').css('display', 'none');
     $('.search-input').focus(function (){
         $('.banner').css('display', 'none');
         $('#map').css('display', 'block');
@@ -24,10 +25,12 @@ $(function() {
 
 
                 json.forEach(function(item, i, arr) {
-                    addMarkerToGroup(group, {lat:item.lat, lng:item.lon},
-                        '<div class="window"><h3>' + item.name +'</h3><p>Цена: ' + item.price + '</p><p>Адрес: ' + item.address +'</p></div>');
+                    let htmlMap = '<div class="window"><h3>' + item.name +'</h3><p>Цена: ' + item.price + '</p><p>Адрес: ' + item.address +'</p></div>';
+                    addMarkerToGroup(group, {lat:item.lat, lng:item.lon}, htmlMap);
+                    let htmlUl = '<div><h3>' + item.name +'</h3><p>Цена: ' + item.price + '</p><p>Адрес: ' + item.address +'</p></div>';
+                    $('main ul').append('<li>'+htmlUl+'</li>');
                 });
-
+                $('main ul').css('display', 'block');
             },
         });
     });

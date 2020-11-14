@@ -1,7 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="913f7229-be7d-465d-806b-3b151515b508" name="Default Changelist" comment="" />
+    <list default="true" id="913f7229-be7d-465d-806b-3b151515b508" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/README.MD" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public_html/php_interface/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/assets/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/assets/js/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/data.html" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/data.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/index.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,7 +45,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1kFyX8vru2ApOuvClp9eiRqyNJC" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -105,12 +135,25 @@
       <option name="presentableId" value="Default" />
       <updated>1605310671006</updated>
       <workItem from="1605310672039" duration="7740000" />
-      <workItem from="1605342137837" duration="30984000" />
+      <workItem from="1605342137837" duration="33981000" />
+      <workItem from="1605384984622" duration="1427000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="421" y="212" width="800" height="684" key="#Deployment" timestamp="1605344559323">
@@ -157,10 +200,10 @@
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="861" y="447" width="260" height="219" key="publish.login/72.27.1848.1053@72.27.1848.1053" timestamp="1605311568269" />
-    <state x="660" y="252" key="run.anything.popup" timestamp="1605361781067">
+    <state x="660" y="252" key="run.anything.popup" timestamp="1605384489266">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state x="660" y="252" key="run.anything.popup/72.27.1848.1053@72.27.1848.1053" timestamp="1605361781067" />
+    <state x="660" y="252" key="run.anything.popup/72.27.1848.1053@72.27.1848.1053" timestamp="1605384489266" />
     <state x="659" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1605360978265">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
