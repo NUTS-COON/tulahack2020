@@ -14,6 +14,11 @@ def search_by_words(words):
     return json.loads(resp.content)
 
 
+def find_pharmacies(lat, lon):
+    resp = requests.get('{0}/findPharmacies?lat={1}&lon={2}'.format(API_URL, lat, lon))
+    return json.loads(resp.content)
+
+
 def add_to_basket(user_id, product_id):
     resp = requests.post('{0}/addToBasket?user_id={1}&product_id={2}'.format(API_URL, user_id, product_id))
     return resp.content

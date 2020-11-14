@@ -3,6 +3,7 @@ from telebot import types
 
 import api_service
 from ImageParser import *
+import here_api_service
 
 BOT_TOKEN = ''
 ERROR_MESSAGE = 'Произошла непредвиденная ошибкаю Попробуйте ещё разок'
@@ -30,6 +31,13 @@ def send_result(message, results):
         bot.send_message(message.from_user.id, text, reply_markup=keyboard)
 
 
+def send_location_btn(message):
+    keyboard = types.ReplyKeyboardMarkup(row_width=1, resize_keyboard=True, one_time_keyboard=True)
+    button_geo = types.KeyboardButton(text="Отправить местоположение", request_location=True)
+    keyboard.add(button_geo)
+    bot.send_message(message.chat.id, "Нажмите на кнопку, чтобы передать местоположение", reply_markup=keyboard)
+
+
 @bot.message_handler(commands=['start', 'go'])
 def start_handler(message):
     bot.send_message(message.chat.id, 'Привет, я бот для заказа лекарств. ' + HELP_TEXT)
@@ -42,7 +50,10 @@ def start_handler(message):
 
 @bot.message_handler(content_types=['location'])
 def handle_loc(message):
-    print(message.location)
+    res = here_api_service.find_pharmacies(message.location.latitude, message.location.longitude)
+    text = '\n'.join(map(lambda x: "{0} - {1}, {2} м".format(x[0], x[1], x[2]), res))
+    text = "Аптеки рядом:\n" + text
+    bot.send_message(message.from_user.id, text)
 
 
 @bot.message_handler(commands=["add"])
@@ -120,6 +131,9 @@ def handle_photo(message):
 @bot.message_handler(content_types=["text"])
 def handle_text(message):
     try:
+        if 'аптек' in message.text.lower():
+            send_location_btn(message)
+            return
         results = api_service.search(message.text)
         if results:
             send_result(message, results)

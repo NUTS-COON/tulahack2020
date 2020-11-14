@@ -3,6 +3,7 @@ import search as elastic_search
 from fastapi import FastAPI
 from starlette.middleware.cors import CORSMiddleware
 import uvicorn
+import here_api_service
 
 app = FastAPI()
 app.add_middleware(
@@ -23,6 +24,11 @@ async def search(query):
 async def search_by_words(words):
     query = elastic_search.get_query_from_words(words.split('|'))
     return elastic_search.find_drugs(query)
+
+
+@app.get('/findPharmacies')
+async def find_pharmacies(lat, lon):
+    return here_api_service.find_pharmacies(lat, lon)
 
 
 @app.post('/addToBasket')
