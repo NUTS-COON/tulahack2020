@@ -4,6 +4,7 @@ from fastapi import FastAPI
 from starlette.middleware.cors import CORSMiddleware
 import uvicorn
 import here_api_service
+import repository
 
 app = FastAPI()
 app.add_middleware(
@@ -13,6 +14,21 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+
+@app.get('/extendSearch')
+async def extendSearch(query):
+    drugs = elastic_search.find_drugs(query, 7)
+    for i in drugs:
+        p = repository.get_pharmacy(i['id'])
+        p_address = p["address"]
+        coords = here_api_service.get_coords(p_address)
+        i["lat"] = coords['lat']
+        i["lon"] = coords['lng']
+        i["address"] = p["address"]
+
+    return drugs
+
 
 
 @app.get('/search')

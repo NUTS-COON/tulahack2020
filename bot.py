@@ -26,13 +26,13 @@ bot = telebot.TeleBot(BOT_TOKEN)
 def send_result(message, results):
     for p in results:
         keyboard = types.InlineKeyboardMarkup()
-        remove_btn = types.InlineKeyboardButton(text="Добавить", callback_data="add_{0}".format(p[0]))
+        remove_btn = types.InlineKeyboardButton(text="Добавить", callback_data="add_{0}".format(p['id']))
         keyboard.add(remove_btn)
         try:
-            expires = datetime.datetime.strptime(p[4], '%Y-%m-%d').strftime("%d %b %y")
+            expires = datetime.datetime.strptime(p['expires'], '%Y-%m-%d').strftime("%d %b %y")
         except:
             expires = 'нет данных'
-        text = "*{0}₽* {1}\n{2}\nГоден до: {3}".format(p[2], p[1], p[3], expires)
+        text = "*{0}₽* {1}\n{2}\nГоден до: {3}".format(p['price'], p['name'], p['manufacturer'], expires)
         bot.send_message(message.from_user.id, text, reply_markup=keyboard, parse_mode='Markdown')
 
 
