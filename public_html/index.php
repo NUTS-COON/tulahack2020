@@ -1,3 +1,6 @@
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'].'/php_interface/header.php';
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -5,8 +8,10 @@
     <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
     <title>IMPOSTER SHOP</title>
     <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.1/mapsjs-ui.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
     <link rel="stylesheet" type="text/css" href="/assets/css/style.css?get=<?=time()?>" />
     <link rel="stylesheet" type="text/css" href="/assets/css/map.css?get=<?=time()?>" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/modal.css?get=<?=time()?>" />
 </head>
 <body id="markers-on-the-map">
     <header>
@@ -17,7 +22,7 @@
             </div>
             <div class="nav">
                 <div class="profile"><img src="/assets/img/profile.png" alt="профиль"></div>
-                <div class="basket"><img src="/assets/img/basket.png" alt="корзина"></div>
+                <a href="#ex1" rel="modal:open"><div class="basket"><img src="/assets/img/basket.png" alt="корзина"></div></a>
             </div>
         </div>
     </header>
@@ -30,12 +35,27 @@
         <div id="map" class="map">
         </div>
     </main>
-    <footer><span>TulaHack2020</span></footer>
+    <footer><span>TulaHack2020</span><p><a href="#ex1" rel="modal:open">Open Modal</a></p></footer>
+    <div id="ex1" class="modal">
+        <h3 class ="text">Корзина</h3>
+        <div class="vp">
+            <table>
+                <?foreach ($basket->getBasket() as $item):?>
+                    <tr>
+                        <th><?=$item['name']?> руб</th>
+                        <td><?=$item['price']?> руб</td>
+                    </tr>
+                <?endforeach;?>
+            </table>
+        </div>
+        <div class="checkout"><button id ="check">Оформить заказ</button></div>
+    </div>
     <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-core.js"></script>
     <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-service.js"></script>
     <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-ui.js"></script>
     <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-mapevents.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
     <script type="text/javascript" src='/assets/js/map.js?get=<?=time()?>'></script>
     <script type="text/javascript" src='/assets/js/script.js?get=<?=time()?>'></script>
 </body>
