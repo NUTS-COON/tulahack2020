@@ -1,11 +1,9 @@
-import telebot
-from telebot import types
-
-import api_service
-from ImageParser import *
-from api import here_api_service
 import datetime
 
+import api_service
+import telebot
+from ImageParser import *
+from telebot import types
 
 BOT_TOKEN = ''
 ERROR_MESSAGE = 'Произошла непредвиденная ошибкаю Попробуйте ещё разок'
@@ -81,7 +79,7 @@ def start_handler(message):
 
 @bot.message_handler(content_types=['location'])
 def handle_loc(message):
-    res = here_api_service.find_pharmacies(message.location.latitude, message.location.longitude)
+    res = api_service.find_pharmacies(message.location.latitude, message.location.longitude)
     text = '\n'.join(map(lambda x: "{0} - {1}, {2} м".format(x[0], x[1], x[2]), res))
     text = "Аптеки рядом:\n" + text
     bot.send_message(message.from_user.id, text)
