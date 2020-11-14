@@ -1,10 +1,7 @@
-import basket
-import search as elastic_search
 from fastapi import FastAPI
 from starlette.middleware.cors import CORSMiddleware
 import uvicorn
-import here_api_service
-import repository
+import here_api_service, search as elastic_search, repository, basket
 
 app = FastAPI()
 app.add_middleware(

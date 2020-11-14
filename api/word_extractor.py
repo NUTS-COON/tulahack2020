@@ -5,7 +5,7 @@ from os.path import isfile, join
 import re
 
 words = set()
-base_dir = 'drugs'
+base_dir = '../drugs'
 files = [f for f in listdir(base_dir) if isfile(join(base_dir, f))]
 for i in files:
     with open(base_dir + '/' + i, encoding='utf8') as f:
