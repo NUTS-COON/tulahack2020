@@ -13,16 +13,21 @@
         <div class="container">
             <div class="logo">impostershop</div>
             <div class="search">
-                <input id="search" placeholder="Поиск...">
+                <input class="search-input" placeholder="Поиск...">
             </div>
-            <div class="profile"><img  src="/assets/img/profile.png" alt="профиль"></div>
-            <div class="basket"><img  src="/assets/img/basket.png" alt="корзина"></div>
+            <div class="nav">
+                <div class="profile"><img src="/assets/img/profile.png" alt="профиль"></div>
+                <div class="basket"><img src="/assets/img/basket.png" alt="корзина"></div>
+            </div>
         </div>
     </header>
     <main>
-        <div id="map" class="cart"></div>
+        <div class="banner">
+            <img class="img" src="/assets/img/26250.png" alt="картинка">
+        </div>
+        <div id="map" class="map"></div>
     </main>
-    <footer>TulaHack2020</footer>
+    <footer><span>TulaHack2020</span></footer>
     <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-core.js"></script>
     <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-service.js"></script>
     <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-ui.js"></script>

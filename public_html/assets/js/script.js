@@ -1,6 +1,11 @@
 $(function() {
-    $('#search').focusout(function (){
-        var search = $('#search').val();
+    $('#map').css('display', 'none');
+    $('.search-input').focus(function (){
+        $('.banner').css('display', 'none');
+        $('#map').css('display', 'block');
+    });
+    $('.search-input').focusout(function (){
+        var search = $('.search-input').val();
         $.ajax({
             url: '/data.html',
             method: 'post',
