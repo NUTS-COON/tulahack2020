@@ -16,7 +16,6 @@ with open('names.txt', 'r', encoding='utf8') as f:
 def get_query_from_words(words):
     words = map(lambda x: x.lower(), words)
     good_words = list(filter(lambda x: x in DRUG_NAMES, words))[:2]
-    sorted(good_words, key=lambda x: len(x))
     return ' '.join(good_words)
 
 
