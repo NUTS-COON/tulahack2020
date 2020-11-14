@@ -27,8 +27,12 @@ def send_result(message, results):
         keyboard = types.InlineKeyboardMarkup()
         remove_btn = types.InlineKeyboardButton(text="Добавить", callback_data="add_{0}".format(p[0]))
         keyboard.add(remove_btn)
-        text = "{0}\nЦена:{1}\n\n".format(p[1], p[2])
-        bot.send_message(message.from_user.id, text, reply_markup=keyboard)
+        try:
+            expires = datetime.datetime.strptime(p[4], '%Y-%m-%d').strftime("%d %b %y")
+        except:
+            expires = 'нет данных'
+        text = "*{0}₽* {1}\n{2}\nГоден до: {3}".format(p[2], p[1], p[3], expires)
+        bot.send_message(message.from_user.id, text, reply_markup=keyboard, parse_mode='Markdown')
 
 
 def send_location_btn(message):
@@ -63,8 +67,19 @@ def add(message):
         result = api_service.add_to_basket(message.from_user.id, product_id)
         if result:
             bot.send_message(message.from_user.id, ADD_TO_BASKET_MESSAGE)
+            products = api_service.get_basket(message.from_user.id)
+            total_sum = 0
+            text = ''
+            if products:
+                for p in products:
+                    total_sum += p['price']
+                    text += "*{0}* {1}\n".format(p['price'], p['name'])
+
+            text += "\nОбщая сумма: {0}".format(total_sum)
+            text = "Товары в корзине:\n" + text
+            bot.send_message(message.from_user.id, text)
         else:
-            bot.send_message(message.from_user.id, ADD_TO_BASKET_ERROR_MESSAGE)
+            bot.send_message(message.from_user.id, ADD_TO_BASKET_ERROR_MESSAGE, parse_mode='Markdown')
     except Exception as e:
         bot.send_message(message.from_user.id, ERROR_MESSAGE)
 

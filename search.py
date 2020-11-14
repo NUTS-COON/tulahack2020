@@ -36,6 +36,6 @@ def find_drugs(query):
     drugs = data['hits']['hits']
     res = []
     for d in drugs:
-        res.append((d['_source']['id'], d['_source']['name'], d['_source']['price']))
+        res.append((d['_source']['id'], d['_source']['name'], d['_source']['price'], d['_source']['manufacturer'], d['_source']['expires']))
 
     return res
