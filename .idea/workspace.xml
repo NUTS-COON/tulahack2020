@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="913f7229-be7d-465d-806b-3b151515b508" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="SCSS File" />
+        <option value="JavaScript File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1kFyX8vru2ApOuvClp9eiRqyNJC" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public_html/assets/img" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public_html/assets/css" />
+      <recent name="$PROJECT_DIR$/public_html/assets/js" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public_html/assets/img" />
+      <recent name="$PROJECT_DIR$/assets/blocks/common" />
+      <recent name="$PROJECT_DIR$/assets/blocks/work-area" />
+      <recent name="$PROJECT_DIR$/assets/blocks/modal" />
+      <recent name="$PROJECT_DIR$/assets/blocks/header" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.build">
+    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="watch" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="watch" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.build" />
+        <item itemvalue="npm.dev" />
+        <item itemvalue="npm.watch" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="913f7229-be7d-465d-806b-3b151515b508" name="Default Changelist" comment="" />
+      <created>1605310671006</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1605310671006</updated>
+      <workItem from="1605310672039" duration="7740000" />
+      <workItem from="1605342137837" duration="25950000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="421" y="212" width="800" height="684" key="#Deployment" timestamp="1605344559323">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="421" y="212" width="800" height="684" key="#Deployment/72.27.1848.1053@72.27.1848.1053" timestamp="1605344559323" />
+    <state x="589" y="215" width="804" height="684" key="#Options" timestamp="1605343984528">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="589" y="215" width="804" height="684" key="#Options/72.27.1848.1053@72.27.1848.1053" timestamp="1605343984528" />
+    <state x="492" y="264" width="832" height="711" key="#SSH_Configurations" timestamp="1605311499226">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="492" y="264" width="832" height="711" key="#SSH_Configurations/72.27.1848.1053@72.27.1848.1053" timestamp="1605311499226" />
+    <state x="729" y="302" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1605356923190">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="729" y="302" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1605356923190" />
+    <state width="1802" height="275" key="GridCell.Tab.0.bottom" timestamp="1605348544680">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state width="1802" height="275" key="GridCell.Tab.0.bottom/72.27.1848.1053@72.27.1848.1053" timestamp="1605348544680" />
+    <state width="1802" height="275" key="GridCell.Tab.0.center" timestamp="1605348544678">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state width="1802" height="275" key="GridCell.Tab.0.center/72.27.1848.1053@72.27.1848.1053" timestamp="1605348544678" />
+    <state width="1802" height="275" key="GridCell.Tab.0.left" timestamp="1605348544676">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state width="1802" height="275" key="GridCell.Tab.0.left/72.27.1848.1053@72.27.1848.1053" timestamp="1605348544676" />
+    <state width="1802" height="275" key="GridCell.Tab.0.right" timestamp="1605348544679">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state width="1802" height="275" key="GridCell.Tab.0.right/72.27.1848.1053@72.27.1848.1053" timestamp="1605348544679" />
+    <state x="791" y="479" width="399" height="156" key="NewPhpFileDialog" timestamp="1605315653471">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="791" y="479" width="399" height="156" key="NewPhpFileDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1605315653471" />
+    <state x="892" y="270" width="311" height="580" key="ftp.server.browser" timestamp="1605311504335">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="892" y="270" width="311" height="580" key="ftp.server.browser/72.27.1848.1053@72.27.1848.1053" timestamp="1605311504335" />
+    <state x="861" y="447" width="260" height="219" key="publish.login" timestamp="1605311568269">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="861" y="447" width="260" height="219" key="publish.login/72.27.1848.1053@72.27.1848.1053" timestamp="1605311568269" />
+    <state x="660" y="252" key="run.anything.popup" timestamp="1605361781067">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="660" y="252" key="run.anything.popup/72.27.1848.1053@72.27.1848.1053" timestamp="1605361781067" />
+    <state x="659" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1605360978265">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="659" y="259" width="672" height="678" key="search.everywhere.popup/72.27.1848.1053@72.27.1848.1053" timestamp="1605360978265" />
+  </component>
+</project>
