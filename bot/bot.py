@@ -4,6 +4,7 @@ import api_service
 import telebot
 from ImageParser import *
 from telebot import types
+from itertools import groupby
 
 BOT_TOKEN = ''
 ERROR_MESSAGE = 'Произошла непредвиденная ошибкаю Попробуйте ещё разок'
@@ -47,12 +48,15 @@ def show_short_basket(user_id):
     total_sum = 0
     text = ''
     if products:
-        for p in products:
+        grouped = groupby(products, key=lambda x: x['id'])
+        for key, ls in grouped:
+            ls = list(ls)
+            p = ls[0]
             total_sum += p['price']
-            text += "*{0}* {1}\n".format(p['price'], p['name'])
+            text += "*{0}* {1} (*{2} шт*)\n".format(p['price'], p['name'], len(ls))
 
     text += "\nОбщая сумма: {0}".format(total_sum)
-    text = "Товары в корзине:\n" + text
+    text = "Товары в корзине (*{0} шт*):\n{1}".format(len(products), text, parse_mode='Markdown')
 
     keyboard = types.ReplyKeyboardMarkup(row_width=1, resize_keyboard=True, one_time_keyboard=True)
     basket_btn = types.KeyboardButton(text="Корзина")
@@ -91,13 +95,17 @@ def basket(message):
         products = api_service.get_basket(message.from_user.id)
         total_sum = 0
         if products:
-            for p in products:
+            grouped = groupby(products, key=lambda x: x['id'])
+            for key, ls in grouped:
+                ls = list(ls)
+                p = ls[0]
                 total_sum += p['price']
                 keyboard = types.InlineKeyboardMarkup()
                 remove_btn = types.InlineKeyboardButton(text="Удалить", callback_data="remove_{0}".format(p['id']))
-                keyboard.add(remove_btn)
-                text = "{0}\nЦена:{1}\n\n".format(p['name'], p['price'])
-                bot.send_message(message.from_user.id, text, reply_markup=keyboard)
+                add_btn = types.InlineKeyboardButton(text="Добавить", callback_data="add_{0}".format(p['id']))
+                keyboard.add(remove_btn, add_btn)
+                text = "{0} (*{1} шт*)\nЦена:{2}\n\n".format(p['name'], len(ls), p['price'])
+                bot.send_message(message.from_user.id, text, reply_markup=keyboard, parse_mode='Markdown')
 
             text = "\nОбщая сумма: {0}".format(total_sum)
             keyboard = types.InlineKeyboardMarkup()
