@@ -33,6 +33,7 @@ $(function() {
                     let htmlUl = '<div><h3>' + item.name +'</h3><p>Цена: ' + item.price + '</p><p>Адрес: ' + item.address +'</p><button class="addCart" data-id="'+item.id+'">В корзину</button></div>';
                     $('main ul').append('<li>'+htmlUl+'</li>');
                 });
+                addCart();
                 $('main ul').css('display', 'block');
                 $('.addCart').click(function (){
                     let id = $(this).attr('data-id');
@@ -59,4 +60,19 @@ $(function() {
             }
         });
     });
+
+    function addCart(){
+        $('.addCart').click(function (){
+            let id = $(this).attr('data-id');
+            $.ajax({
+                url: '/ajax.php',
+                method: 'get',
+                data: {type: "addCart", id: id},
+                success: function (data) {
+                    console.log(data);
+                    $('.vp').html(data);
+                }
+            });
+        });
+    }
 });
