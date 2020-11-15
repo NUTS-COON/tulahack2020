@@ -56,13 +56,13 @@ def show_short_basket(user_id):
             text += "*{0}* {1} (*{2} шт*)\n".format(p['price'], p['name'], len(ls))
 
     text += "\nОбщая сумма: {0}".format(total_sum)
-    text = "Товары в корзине (*{0} шт*):\n{1}".format(len(products), text, parse_mode='Markdown')
+    text = "Товары в корзине (*{0} шт*):\n{1}".format(len(products), text)
 
     keyboard = types.ReplyKeyboardMarkup(row_width=1, resize_keyboard=True, one_time_keyboard=True)
     basket_btn = types.KeyboardButton(text="Корзина")
     keyboard.add(basket_btn)
 
-    bot.send_message(user_id, text, reply_markup=keyboard)
+    bot.send_message(user_id, text, reply_markup=keyboard, parse_mode='Markdown')
 
 
 def remove_from_basket(product_id, user_id):
