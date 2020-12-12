@@ -3,7 +3,6 @@ version: "3"
 services:
   search-api:
     build: api/
-    command: python ./store_api.py
     environment:
       - MY_SQL_HOST=
       - MY_SQL_LOGIN=
@@ -19,7 +18,6 @@ services:
 
   image-api:
     build: imageApi/
-    command: python ./app.py
     environment:
       - SERVICE_PORT=3002
     ports:
@@ -28,7 +26,6 @@ services:
   bot:
     build:
       bot/
-    command: python ./bot.py
     environment:
       - BOT_TOKEN=
       - API_URL=http://search-api:3001

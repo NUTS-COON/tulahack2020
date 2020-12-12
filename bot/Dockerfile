@@ -3,3 +3,6 @@ COPY . /bot
 WORKDIR /bot
 RUN apt-get update -y
 RUN pip install pyTelegramBotAPI
+
+ENTRYPOINT ["python"]
+CMD ["bot.py"]
