@@ -149,7 +149,7 @@ def handle_text(message):
         else:
             bot.send_message(message.from_user.id, TEXT_SEARCH_ERROR_MESSAGE)
     except Exception as e:
-        bot.send_message(message.from_user.id, ERROR_MESSAGE)
+        bot.send_message(message.from_user.id, "{0}. {1}".format(ERROR_MESSAGE, e))
 
 
 @bot.callback_query_handler(func=lambda call: call.data == 'make_order')
