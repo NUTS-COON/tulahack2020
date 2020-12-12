@@ -1,12 +1,13 @@
 import pymysql
 from pymysql.cursors import DictCursor
+import constants
 
 
 connection = pymysql.connect(
-    host='localhost',
-    user='',
-    password='',
-    db='drugs',
+    host=constants.MY_SQL_HOST,
+    user=constants.MY_SQL_LOGIN,
+    password=constants.MY_SQL_PASSWORD,
+    db=constants.MY_SQL_DATABASE,
     charset='utf8mb4',
     cursorclass=DictCursor
 )
