@@ -123,13 +123,13 @@ def handle_photo(message):
     try:
         file_info = bot.get_file(message.photo[-1].file_id)
         img_data = bot.download_file(file_info.file_path)
-        words = get_words_from_image(img_data)
+        words = api_service.parse_image(img_data)
         results = api_service.search_by_words(sorted(words))
         if results:
             send_result(message, results)
         else:
             bot.send_message(message.from_user.id, IMG_SEARCH_ERROR_MESSAGE)
-    except:
+    except Exception as e:
         bot.send_message(message.from_user.id, ERROR_MESSAGE)
 
 

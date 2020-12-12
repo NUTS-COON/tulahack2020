@@ -4,8 +4,8 @@ from pymysql.cursors import DictCursor
 
 connection = pymysql.connect(
     host='localhost',
-    user='root',
-    password='admin',
+    user='',
+    password='',
     db='drugs',
     charset='utf8mb4',
     cursorclass=DictCursor

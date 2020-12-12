@@ -2,6 +2,7 @@ import requests
 import json
 
 API_URL = 'http://localhost:3001'
+IMAGE_PARSER_URL = 'http://localhost:3002'
 
 
 def search(query):
@@ -35,3 +36,8 @@ def remove_from_basket(user_id, product_id):
 
 def make_order(user_id):
     requests.post('{0}/makeOrder?user_id={1}'.format(API_URL, user_id))
+
+
+def parse_image(img):
+    res = requests.post('{0}/parseImage'.format(IMAGE_PARSER_URL), files={"media":img})
+    return json.loads(res.text)
