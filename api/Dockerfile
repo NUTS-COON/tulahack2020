@@ -1,5 +1,8 @@
 FROM tiangolo/uvicorn-gunicorn:python3.8
-RUN pip install fastapi
+COPY . /app
+WORKDIR /app
+
+RUN pip install -r requirements.txt
 
 ENTRYPOINT ["python"]
-CMD ["app.py"]
+CMD ["store_api.py"]

@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from starlette.middleware.cors import CORSMiddleware
 import uvicorn
 import here_api_service, search as elastic_search, repository, basket
+import constants
 
 app = FastAPI()
 app.add_middleware(
@@ -63,5 +64,5 @@ async def get_basket(user_id):
 async def make_order(user_id):
     basket.make_order(user_id)
 
-
-uvicorn.run(app, host="0.0.0.0", port=3001)
+if __name__ == '__main__':
+    uvicorn.run(app, host="0.0.0.0", port=constants.SERVICE_PORT)

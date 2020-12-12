@@ -1,7 +1,8 @@
 import requests
 import json
+import constants
 
-TOKEN = ""
+TOKEN = constants.HERE_API_KEY
 
 
 def find_pharmacies(lat, lon):

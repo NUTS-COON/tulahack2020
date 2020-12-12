@@ -1,9 +1,6 @@
 import requests
 import json
-
-SIZE = '5'
-ELASTIC_BASE_URL = 'http://localhost:9200'
-ELASTIC_DRUG_SEARCH_PATH = ELASTIC_BASE_URL + '/products/product/_search'
+import constants
 
 DRUG_NAMES = set()
 
@@ -19,7 +16,7 @@ def get_query_from_words(words):
     return ' '.join(good_words)
 
 
-def find_drugs(query, size=SIZE):
+def find_drugs(query, size=constants.ELASTIC_RESPONSE_SIZE):
     query_data = json.dumps({
         "query": {
             "match": {
@@ -30,7 +27,7 @@ def find_drugs(query, size=SIZE):
             }
         }
     }, ensure_ascii=False)
-    resp = requests.post(ELASTIC_DRUG_SEARCH_PATH + '?size=' + str(size), json=json.loads(query_data))
+    resp = requests.post(constants.ELASTIC_DRUG_SEARCH_PATH + '?size=' + str(size), json=json.loads(query_data))
     data = json.loads(resp.content)
     drugs = data['hits']['hits']
     res = []
