@@ -1,8 +1,7 @@
 import requests
 import json
 
-API_URL = 'http://localhost:3001'
-IMAGE_PARSER_URL = 'http://localhost:3002'
+from constants import API_URL, IMAGE_PARSER_URL
 
 
 def search(query):

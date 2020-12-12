@@ -1,11 +1,12 @@
 import datetime
 
-import api_service
 import telebot
 from telebot import types
 from itertools import groupby
 
-BOT_TOKEN = ''
+import api_service
+from constants import BOT_TOKEN
+
 ERROR_MESSAGE = 'Произошла непредвиденная ошибкаю Попробуйте ещё разок'
 IMG_SEARCH_ERROR_MESSAGE = 'Не удалось найти товар с картинки'
 TEXT_SEARCH_ERROR_MESSAGE = 'Ничего не найдено. Возможно, товар закончился или в запросе допущена ошибка. ' \
