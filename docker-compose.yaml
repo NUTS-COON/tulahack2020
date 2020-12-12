@@ -1,0 +1,38 @@
+version: "3"
+
+services:
+  search-api:
+    build: api/
+    command: python ./store_api.py
+    environment:
+      - MY_SQL_HOST=
+      - MY_SQL_LOGIN=
+      - MY_SQL_PASSWORD=
+      - MY_SQL_DATABASE=
+      - ELASTIC_RESPONSE_SIZE=5
+      - ELASTIC_BASE_URL=
+      - ELASTIC_COLLECTION_PATH=/products/product/_search
+      - HERE_API_KEY=
+      - SERVICE_PORT=3001
+    ports:
+      - 3001:3001
+
+  image-api:
+    build: imageApi/
+    command: python ./app.py
+    environment:
+      - SERVICE_PORT=3002
+    ports:
+      - 3002:3002
+
+  bot:
+    build:
+      bot/
+    command: python ./bot.py
+    environment:
+      - BOT_TOKEN=
+      - API_URL=http://search-api:3001
+      - IMAGE_PARSER_URL=http://image-api:3002
+    depends_on:
+      - search-api
+      - image-api

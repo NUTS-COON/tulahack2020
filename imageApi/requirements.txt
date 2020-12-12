@@ -8,7 +8,5 @@ itsdangerous
 Jinja2
 MarkupSafe
 numpy
-opencv-contrib-python
-pillow
 pytesseract
 werkzeug

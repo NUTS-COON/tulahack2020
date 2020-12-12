@@ -1,4 +1,5 @@
 import re
+import os
 
 import cv2
 import numpy as np
@@ -53,4 +54,5 @@ async def extendSearch(media=Form(...)):
     return get_words_from_image(media.file.read())
 
 if __name__ == '__main__':
-    uvicorn.run(app, host="0.0.0.0", port=3002)
+    port = int(os.environ['SERVICE_PORT'])
+    uvicorn.run(app, host="0.0.0.0", port=port)

@@ -1,3 +1,5 @@
-BOT_TOKEN = ''
-API_URL = 'http://localhost:3001'
-IMAGE_PARSER_URL = 'http://localhost:3002'
+import os
+
+BOT_TOKEN = os.environ['BOT_TOKEN']
+API_URL = os.environ['API_URL']
+IMAGE_PARSER_URL = os.environ['IMAGE_PARSER_URL']
