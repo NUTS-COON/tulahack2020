@@ -2,7 +2,6 @@ import datetime
 
 import api_service
 import telebot
-from ImageParser import *
 from telebot import types
 from itertools import groupby
 
