@@ -115,7 +115,7 @@ def basket(message):
         else:
             bot.send_message(message.from_user.id, "Корзина пуста")
     except Exception as e:
-        bot.send_message(message.from_user.id, ERROR_MESSAGE)
+        bot.send_message(message.from_user.id, "{0}. {1}".format(ERROR_MESSAGE, e))
 
 
 @bot.message_handler(content_types=['photo'])
@@ -130,7 +130,7 @@ def handle_photo(message):
         else:
             bot.send_message(message.from_user.id, IMG_SEARCH_ERROR_MESSAGE)
     except Exception as e:
-        bot.send_message(message.from_user.id, ERROR_MESSAGE)
+        bot.send_message(message.from_user.id, "{0}. {1}".format(ERROR_MESSAGE, e))
 
 
 @bot.message_handler(content_types=["text"])
@@ -158,8 +158,8 @@ def query_text(message):
         api_service.make_order(message.from_user.id)
         bot.send_message(message.from_user.id, MAKE_ORDER_MESSAGE)
         bot.edit_message_reply_markup(message.from_user.id, message_id=message.message.message_id, reply_markup='')
-    except:
-        bot.send_message(message.from_user.id, ERROR_MESSAGE)
+    except Exception as e:
+        bot.send_message(message.from_user.id, "{0}. {1}".format(ERROR_MESSAGE, e))
 
 
 @bot.callback_query_handler(func=lambda call: call.data.startswith("remove_"))
@@ -180,7 +180,7 @@ def query_text(message):
         else:
             bot.send_message(message.from_user.id, ADD_TO_BASKET_ERROR_MESSAGE, parse_mode='Markdown')
     except Exception as e:
-        bot.send_message(message.from_user.id, ERROR_MESSAGE)
+        bot.send_message(message.from_user.id, "{0}. {1}".format(ERROR_MESSAGE, e))
 
 
 bot.polling(none_stop=True)
