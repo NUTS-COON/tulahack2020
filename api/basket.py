@@ -39,8 +39,7 @@ def remove(user_id, product_id):
 
 def get_basket(user_id):
     with connection.cursor(pymysql.cursors.DictCursor) as cursor:
-        cursor.execute('select p.id, p.name, p.price from basket b '
-                       'join product p on b.product_id = p.id and b.user_id = %s' % user_id)
+        cursor.execute('select p.id, p.name, p.price from basket b join product p on b.product_id = p.id and b.user_id = %s', (user_id))
         return list(cursor)
 
 
